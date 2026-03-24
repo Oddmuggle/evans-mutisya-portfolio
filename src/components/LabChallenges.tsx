@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { labChallenges } from '@/data/portfolio-data';
-import { Shield, Target, Wrench, BookOpen, Calendar, AlertCircle } from 'lucide-react';
+import { Shield, Target, Calendar, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function LabChallenges() {

@@ -55,6 +55,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'Django', 'Flask', 'SQL', 'RBAC', 'Encryption'],
     category: 'development',
     githubUrl: 'https://github.com/Oddmuggle',
+    liveUrl: '',
     highlights: [
       'Implemented RBAC for user permissions and approval workflows',
       'Integrated data encryption and secure authentication',
@@ -68,6 +69,8 @@ export const projects: Project[] = [
     description: 'GPS-based attendance system for remote engineers with payroll integration, eliminating manual timesheet processing.',
     technologies: ['Python', 'GPS', 'Payroll Integration', 'Mobile'],
     category: 'development',
+    githubUrl: '',
+    liveUrl: '',
     highlights: [
       'Enabled GPS verification for remote clock-in/out across 5 project sites',
       'Integrated with payroll system for automated reporting',
@@ -81,11 +84,42 @@ export const projects: Project[] = [
     description: 'Secure multi-site IPSec VPN solution for power meter connectivity across Kenya and Uganda, ensuring reliable remote monitoring.',
     technologies: ['IPSec', 'VPN', 'Teltonika Routers', 'Network Security'],
     category: 'infrastructure',
+    githubUrl: '',
+    liveUrl: '',
     highlights: [
       'Implemented secure IPSec tunneling for 5+ remote sites across East Africa',
       'Configured Teltonika industrial routers for encrypted communication',
       'Enabled centralized power consumption monitoring for 100+ meters',
       'Improved remote infrastructure security and reliability by 99%'
+    ]
+  },
+  {
+    id: 'perfecto-adventures',
+    title: 'Perfecto Adventures & Safaris Website',
+    description: 'Responsive tourism website with booking integration and SEO optimization.',
+    technologies: ['JavaScript', 'HTML/CSS', 'SEO', 'Responsive Design'],
+    category: 'development',
+    githubUrl: 'https://github.com/Oddmuggle/perfecto-adventures',
+    liveUrl: 'https://perfecto-adventures.vercel.app',
+    highlights: [
+      'Designed responsive UI for all devices',
+      'Integrated tour inquiry and booking forms',
+      'Implemented SEO optimization',
+      'Enhanced online customer engagement'
+    ]
+  },
+  {
+    id: 'senrans',
+    title: 'Senrans Website',
+    description: 'Business website for Senrans with modern design and functionality.',
+    technologies: ['JavaScript', 'HTML/CSS', 'UI/UX'],
+    category: 'development',
+    githubUrl: 'https://github.com/Oddmuggle/senrans',
+    liveUrl: 'https://senrans.vercel.app',
+    highlights: [
+      'Modern responsive design',
+      'Business-focused UI/UX',
+      'Performance optimized'
     ]
   }
 ];
@@ -201,7 +235,7 @@ export const labChallenges: LabChallenge[] = [
       'Documented findings and remediation steps'
     ],
     tools: ['Burp Suite', 'sqlmap', 'MySQL', 'Python'],
-    screenshots: [], // Add screenshot paths here
+    screenshots: [],
     lessonsLearned: [
       'Understanding parameterized queries is crucial for prevention',
       'Input validation alone is insufficient against sophisticated attacks',
@@ -230,7 +264,8 @@ export const labChallenges: LabChallenge[] = [
       'Proper output encoding prevents script execution',
       'Never trust user input, even from authenticated users',
       'Regular security headers audit helps maintain protection'
-    ]
+    ],
+    dateCompleted: '2025-02-20'
   },
   {
     id: 'network-scanning',
@@ -252,7 +287,8 @@ export const labChallenges: LabChallenge[] = [
       'Service version detection is critical for vulnerability management',
       'Misconfigured services are often the biggest security gaps',
       'Defense-in-depth approach requires layered security controls'
-    ]
+    ],
+    dateCompleted: '2025-03-01'
   }
 ];
 
