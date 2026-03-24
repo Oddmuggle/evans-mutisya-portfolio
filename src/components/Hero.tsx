@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin, Mail, MapPin, Phone, Shield } from 'lucide-react';
-import Image from 'next/image';
+import { Download, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio-data';
 import { useEffect, useRef } from 'react';
 
@@ -12,14 +11,15 @@ export default function Hero() {
   useEffect(() => {
     if (!matrixRef.current) return;
     
-    const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const characters = '01';
     const matrix = matrixRef.current;
     
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 15; i++) {
       const span = document.createElement('span');
       span.style.left = Math.random() * 100 + '%';
-      span.style.animationDelay = Math.random() * 3 + 's';
-      span.style.animationDuration = Math.random() * 2 + 2 + 's';
+      span.style.animationDelay = Math.random() * 5 + 's';
+      span.style.animationDuration = Math.random() * 5 + 5 + 's';
+      span.style.opacity = '0.2';
       span.textContent = characters[Math.floor(Math.random() * characters.length)];
       matrix.appendChild(span);
     }
@@ -52,7 +52,7 @@ export default function Hero() {
                 <span className="text-cyber-blue">/&gt;</span>
               </h1>
               <h2 className="font-mono text-xl md:text-2xl text-cyber-green mt-2">
-                IT Systems & Cybersecurity Specialist
+                {personalInfo.tagline}
               </h2>
             </motion.div>
 
@@ -123,7 +123,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Profile Image */}
+          {/* Right Column - Animated Circle (No Image) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -131,12 +131,17 @@ export default function Hero() {
             className="relative hidden lg:block"
           >
             <div className="relative w-96 h-96 mx-auto">
+              {/* Outer glow effect */}
               <div className="absolute inset-0 bg-cyber-blue/20 rounded-full blur-3xl animate-pulse"></div>
+              
+              {/* Empty circle container - just the border and animation */}
               <div className="relative w-full h-full rounded-full border-4 border-cyber-blue/30 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-transparent"></div>
-                {/* Add your profile image here */}
-                <div className="w-full h-full bg-cyber-gray flex items-center justify-center">
-                  <Shield className="w-32 h-32 text-cyber-blue/50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/10 to-transparent z-10"></div>
+                <div className="w-full h-full bg-cyber-dark/50 backdrop-blur-sm flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-cyber-blue animate-pulse"></div>
+                    <p className="font-mono text-cyber-blue text-sm">Cyber Security Specialist</p>
+                  </div>
                 </div>
               </div>
               
