@@ -3,6 +3,7 @@ import SkillsMatrix from '@/components/SkillsMatrix';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Certifications from '@/components/Certifications';
+import AcademicBackground from '@/components/AcademicBackground';
 import LabChallenges from '@/components/LabChallenges';
 import Contact from '@/components/Contact';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Certifications />
+      <AcademicBackground />
       <LabChallenges />
       <Contact />
     </>
