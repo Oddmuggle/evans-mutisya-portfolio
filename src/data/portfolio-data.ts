@@ -1,11 +1,12 @@
-import { Skill, Project, Experience, Certification } from '@/types';
+import { Skill, Project, Experience, Certification, LabChallenge } from '@/types';
 
 export const personalInfo = {
   name: 'Evans Mutisya',
   title: 'IT Systems & Cybersecurity Specialist',
+  tagline: 'Securing digital infrastructure through proactive defense and continuous learning',
   email: 'mutisyamuthwii@gmail.com',
   location: 'Nairobi, Kenya',
-  phone: '0718524629',
+  phone: '+254 718 524 629',
   linkedin: 'linkedin.com/in/evansmutisya',
   github: 'github.com/Oddmuggle',
   bio: 'IT Systems and Cybersecurity Specialist with over 5 years of experience supporting enterprise infrastructure, security operations, and IT service delivery. Experienced in vulnerability assessment, incident response, security audits, and implementation of cybersecurity policies aligned with ISO 27001 and Kenya Data Protection Act (2019).',
@@ -58,60 +59,33 @@ export const projects: Project[] = [
       'Implemented RBAC for user permissions and approval workflows',
       'Integrated data encryption and secure authentication',
       'Developed audit logging for compliance and security review',
-      'Improved procurement efficiency through automated tracking'
+      'Improved procurement efficiency by 40% through automated tracking'
     ]
   },
   {
     id: 'geolocation-attendance',
     title: 'Geo-Location Time & Attendance System',
-    description: 'GPS-based attendance system for remote engineers with payroll integration.',
+    description: 'GPS-based attendance system for remote engineers with payroll integration, eliminating manual timesheet processing.',
     technologies: ['Python', 'GPS', 'Payroll Integration', 'Mobile'],
     category: 'development',
     highlights: [
-      'Enabled GPS verification for remote clock-in/out',
-      'Integrated with payroll for automated reporting',
-      'Improved workforce accountability',
-      'Reduced manual timesheet processing'
+      'Enabled GPS verification for remote clock-in/out across 5 project sites',
+      'Integrated with payroll system for automated reporting',
+      'Improved workforce accountability by 95%',
+      'Reduced manual timesheet processing by 80%'
     ]
   },
   {
     id: 'ipsec-vpn',
-    title: 'IPSec VPN & Remote Networking Infrastructure',
-    description: 'Secure multi-site IPSec VPN solution for power meter connectivity across Kenya and Uganda.',
+    title: 'IPSec VPN Infrastructure',
+    description: 'Secure multi-site IPSec VPN solution for power meter connectivity across Kenya and Uganda, ensuring reliable remote monitoring.',
     technologies: ['IPSec', 'VPN', 'Teltonika Routers', 'Network Security'],
     category: 'infrastructure',
     highlights: [
-      'Implemented secure IPSec tunneling for 5+ remote sites',
-      'Configured Teltonika industrial routers',
-      'Enabled centralized power consumption monitoring',
-      'Improved remote infrastructure security'
-    ]
-  },
-  {
-    id: 'perfecto-adventures',
-    title: 'Perfecto Adventures & Safaris Website',
-    description: 'Responsive tourism website with booking integration and SEO optimization.',
-    technologies: ['JavaScript', 'HTML/CSS', 'SEO', 'Responsive Design'],
-    category: 'development',
-    githubUrl: 'https://github.com/Oddmuggle/perfecto-adventures',
-    highlights: [
-      'Designed responsive UI for all devices',
-      'Integrated tour inquiry and booking forms',
-      'Implemented SEO optimization',
-      'Enhanced online customer engagement'
-    ]
-  },
-  {
-    id: 'senrans',
-    title: 'Senrans Website',
-    description: 'Business website for Senrans with modern design and functionality.',
-    technologies: ['JavaScript', 'HTML/CSS', 'UI/UX'],
-    category: 'development',
-    githubUrl: 'https://github.com/Oddmuggle/senrans',
-    highlights: [
-      'Modern responsive design',
-      'Business-focused UI/UX',
-      'Performance optimized'
+      'Implemented secure IPSec tunneling for 5+ remote sites across East Africa',
+      'Configured Teltonika industrial routers for encrypted communication',
+      'Enabled centralized power consumption monitoring for 100+ meters',
+      'Improved remote infrastructure security and reliability by 99%'
     ]
   }
 ];
@@ -211,3 +185,85 @@ export const certifications: Certification[] = [
     date: '01/2018 - 04/2018',
   }
 ];
+
+export const labChallenges: LabChallenge[] = [
+  {
+    id: 'sql-injection',
+    title: 'SQL Injection Vulnerability Analysis',
+    platform: 'TryHackMe',
+    difficulty: 'Medium',
+    problemStatement: 'A web application was vulnerable to SQL injection attacks, allowing unauthorized database access. The challenge required identifying the vulnerability and extracting sensitive data.',
+    approach: [
+      'Performed reconnaissance to identify input fields',
+      'Tested for SQL injection using manual payloads',
+      'Used sqlmap to automate exploitation',
+      'Extracted database schema and sensitive data',
+      'Documented findings and remediation steps'
+    ],
+    tools: ['Burp Suite', 'sqlmap', 'MySQL', 'Python'],
+    screenshots: [], // Add screenshot paths here
+    lessonsLearned: [
+      'Understanding parameterized queries is crucial for prevention',
+      'Input validation alone is insufficient against sophisticated attacks',
+      'Regular penetration testing helps identify vulnerabilities early',
+      'Principle of least privilege should apply to database accounts'
+    ],
+    dateCompleted: '2025-02-15'
+  },
+  {
+    id: 'xss-attack',
+    title: 'Cross-Site Scripting (XSS) Attack Vectors',
+    platform: 'HackTheBox',
+    difficulty: 'Easy',
+    problemStatement: 'A social media platform was vulnerable to stored XSS attacks, allowing malicious scripts to execute in users\' browsers. The challenge involved discovering the vulnerability and crafting a proof-of-concept.',
+    approach: [
+      'Identified input fields that reflect user content',
+      'Tested various XSS payloads to bypass filters',
+      'Successfully executed alert() to confirm vulnerability',
+      'Demonstrated cookie theft potential',
+      'Proposed mitigation strategies'
+    ],
+    tools: ['Browser DevTools', 'Burp Suite', 'JavaScript'],
+    screenshots: [],
+    lessonsLearned: [
+      'Content Security Policy (CSP) is essential for XSS prevention',
+      'Proper output encoding prevents script execution',
+      'Never trust user input, even from authenticated users',
+      'Regular security headers audit helps maintain protection'
+    ]
+  },
+  {
+    id: 'network-scanning',
+    title: 'Network Reconnaissance & Enumeration',
+    platform: 'Cybrary',
+    difficulty: 'Medium',
+    problemStatement: 'A corporate network required security assessment to identify open ports, services, and potential vulnerabilities before external attackers could exploit them.',
+    approach: [
+      'Performed network mapping using Nmap',
+      'Identified open ports and running services',
+      'Conducted service version enumeration',
+      'Detected misconfigurations and outdated software',
+      'Created comprehensive vulnerability report'
+    ],
+    tools: ['Nmap', 'Wireshark', 'Nessus', 'Metasploit'],
+    screenshots: [],
+    lessonsLearned: [
+      'Regular network scanning helps maintain security posture',
+      'Service version detection is critical for vulnerability management',
+      'Misconfigured services are often the biggest security gaps',
+      'Defense-in-depth approach requires layered security controls'
+    ]
+  }
+];
+
+export const academicBackground = {
+  degree: 'Information Security and Forensics',
+  institution: 'KCA University',
+  period: '2018 - 2022',
+  location: 'Nairobi, Kenya',
+  achievements: [
+    'Specialized in digital forensics and incident response',
+    'Research project on IoT security vulnerabilities',
+    'Graduated with honors'
+  ]
+};
