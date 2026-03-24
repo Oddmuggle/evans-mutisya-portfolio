@@ -100,7 +100,7 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'HTML/CSS', 'SEO', 'Responsive Design'],
     category: 'development',
     githubUrl: 'https://github.com/Oddmuggle/perfecto-adventures',
-    liveUrl: 'https://perfecto-adventures.co.ke',
+    liveUrl: 'https://perfectoadventures.co.ke/',
     highlights: [
       'Designed responsive UI for all devices',
       'Integrated tour inquiry and booking forms',
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'HTML/CSS', 'UI/UX'],
     category: 'development',
     githubUrl: 'https://github.com/Oddmuggle/senrans',
-    liveUrl: 'https://senrans.com',
+    liveUrl: 'https://senrans.com/',
     highlights: [
       'Modern responsive design',
       'Business-focused UI/UX',
