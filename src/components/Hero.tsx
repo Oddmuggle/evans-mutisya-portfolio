@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Download, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { personalInfo } from '@/data/portfolio-data';
 import { useEffect, useRef } from 'react';
 
@@ -123,7 +124,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Animated Circle (No Image) */}
+          {/* Right Column - Profile Photo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -134,15 +135,18 @@ export default function Hero() {
               {/* Outer glow effect */}
               <div className="absolute inset-0 bg-cyber-blue/20 rounded-full blur-3xl animate-pulse"></div>
               
-              {/* Empty circle container - just the border and animation */}
+              {/* Photo circle container */}
               <div className="relative w-full h-full rounded-full border-4 border-cyber-blue/30 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/10 to-transparent z-10"></div>
-                <div className="w-full h-full bg-cyber-dark/50 backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-cyber-blue animate-pulse"></div>
-                    <p className="font-mono text-cyber-blue text-sm">Cyber Security Specialist</p>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-transparent z-10"></div>
+                
+                {/* Profile Image - Add your photo to public/images/profile.jpg */}
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Evans Mutisya - Cybersecurity Specialist"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               
               {/* Animated rings */}
